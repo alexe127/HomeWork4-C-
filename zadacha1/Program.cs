@@ -23,4 +23,4 @@ for (int i = 0; i < array.Length; i++)
 
 Console.WriteLine();
 Console.WriteLine("количество чётных элементов = " + chet);
-Console.WriteLine("количество не чётныхэлементов = " + nechet);
+Console.WriteLine("количество не чётных элементов = " + nechet);

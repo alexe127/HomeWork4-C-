@@ -9,18 +9,18 @@ for (int i = 0; i < array.Length; i++)
     array[i] = random.Next(100, 1000);
     Console.Write(array[i] + " ");
 }
-int countPlus = 0;
-int countMinus = 0;
+int chet = 0;
+int nechet = 0;
 for (int i = 0; i < array.Length; i++)
 {
     if (array[i] % 2 == 0)
     {
-        countPlus++;
+        chet++;
     }
-    else countMinus++;
+    else nechet++;
 }
 
 
 Console.WriteLine();
-Console.WriteLine("количество положительных элементов = " + countPlus);
-Console.WriteLine("количество отрицательных элементов = " + countMinus);
+Console.WriteLine("количество чётных элементов = " + chet);
+Console.WriteLine("количество не чётныхэлементов = " + nechet);

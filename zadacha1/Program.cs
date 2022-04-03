@@ -1,26 +1,44 @@
 ﻿//  Задать массив, заполнить случайными положительными трёхзначными числами. 
 //Показать количество нечетных\четных чисел
+int[] array = new int[11];
 
-int[] array = new int[10];
-
-Random random = new Random();
-for (int i = 0; i < array.Length; i++)
+void FillArray()
 {
-    array[i] = random.Next(100, 1000);
-    Console.Write(array[i] + " ");
-}
-int chet = 0;
-int nechet = 0;
-for (int i = 0; i < array.Length; i++)
-{
-    if (array[i] % 2 == 0)
+    Random random = new Random();
+    for (int i = 0; i < array.Length; i++)
     {
-        chet++;
+        array[i] = random.Next(100, 1000);
     }
-    else nechet++;
 }
+void PrintArray(int[] currentArray)
+{
+    for (int i = 0; i < currentArray.Length; i++)
+    {
+        Console.Write(currentArray[i] + " ");
+    }
+    Console.WriteLine();
+}
+void ChetNechet()
+{
+    int chet = 0;
+    int nechet = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] % 2 == 0)
+        {
+            chet++;
+        }
+        else nechet++;
+    }
+    Console.WriteLine("количество чётных элементов = " + chet);
+    Console.WriteLine("количество не чётных элементов = " + nechet);
+}
+FillArray();
+PrintArray(array);
+ChetNechet();
 
 
-Console.WriteLine();
-Console.WriteLine("количество чётных элементов = " + chet);
-Console.WriteLine("количество не чётных элементов = " + nechet);
+
+
+
+
